@@ -127,13 +127,13 @@ Display RoleBindings By Namespace
 
 Example of use : coddy-context
 ===
-	# check the current context
+	# Check the current context
 	kubectl config current-context
 
 	# Switch to the coddy-context 
 	kubectl config use-context coddy-context
 
-	# check the current context
+	# Sheck the current context
 	kubectl config current-context
 
 	# Try to create a pod in the namespace `prod` => FORBIDDEN
