@@ -42,6 +42,11 @@ User Creation
 
 **kubia** user
 ---
+	# Create a new directory in /home/hamza/Documents/users-kube
+	mkdir /home/hamza/Documents/users-kube/kubia
+
+	# Move to this location
+	cd /home/hamza/Documents/users-kube/kubia
 
 	# Create the private key 
 	openssl genrsa -out kubia.key 2048
@@ -54,6 +59,12 @@ User Creation
 
 **coddy** user
 ---
+
+	# Create a new directory in /home/hamza/Documents/users-kube
+	mkdir /home/hamza/Documents/users-kube/coddy
+
+	# Move to this location
+	cd /home/hamza/Documents/users-kube/coddy
 
 	# Create the private key 
 	openssl genrsa -out coddy.key 2048
@@ -142,17 +153,11 @@ Example of use : coddy-context
 	# Try to create a pod in the namespace `dev`  => OK
 	kubectl create -f pods/nginx-pod.yml -n dev
 
-Remove a user from the kube config
+Remove data from the kube config
 ===
 
-	# Replace USER_NAME by the real name
+	# Remove user - Replace USER_NAME by the real name
 	kubectl config unset users.USER_NAME
 
-Remove a context
-===
-
-	# Replace CONTEXT_NAME with the context to delete
+	# Remove context - Replace CONTEXT_NAME with the context to delete
 	kubectl config delete-context CONTEXT_NAME
-
-
-
