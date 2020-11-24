@@ -28,6 +28,8 @@ Some Definitions
 
 cf: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole
 
+>	Kubernetes RBAC is a core component of Kubernetes and lets you create and grant roles (sets of permissions) for any object 		or type of object within the cluster.
+
 >	**cluster-admin Role** : 	Allows super-user access to perform any action on any resource.
 	When used in a ClusterRoleBinding, it gives full control over every resource in the cluster and in all namespaces. When used in a RoleBinding, it gives full control over every resource in the role binding's namespace, including the namespace itself.
 
