@@ -1,6 +1,6 @@
 
 Scenario
-=========
+===
 
 - Two namespaces : 
 	- dev
@@ -37,14 +37,12 @@ cf: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clust
 	If used in a RoleBinding, allows read/write access to most resources in a namespace, including the ability to create roles and role bindings within the namespace. This role does not allow write access to resource quota or to the namespace itself.
 
 >	**edit Role** : Allows read/write access to most objects in a namespace.
-	This role does not allow viewing or modifying roles or role bindings. However,
-	this role allows accessing Secrets and running Pods as any ServiceAccount in the namespace,
+	This role does not allow viewing or modifying roles or role bindings.
+	However, this role allows accessing Secrets and running Pods as any ServiceAccount in the namespace,
 	so it can be used to gain the API access levels of any ServiceAccount in the namespace.
 
 > 	**view Role** : Allows read-only access to see most objects in a namespace. It does not allow viewing roles or role bindings.
-	This role does not allow viewing Secrets, since reading the contents of Secrets enables access to ServiceAccount credentials in the namespace,
-	which would allow API access as any ServiceAccount in the namespace (a form of privilege escalation).
-
+	This role does not allow viewing Secrets, since reading the contents of Secrets enables access to ServiceAccount credentials in the namespace, which would allow API access as any ServiceAccount in the namespace (a form of privilege escalation).
 
 User Creation
 ===
@@ -171,7 +169,7 @@ kubectl config current-context
 # Switch to the coddy-context 
 kubectl config use-context coddy-context
 
-# Sheck the current context
+# Check the current context
 kubectl config current-context
 
 # Try to create a pod in the namespace `prod` => FORBIDDEN
